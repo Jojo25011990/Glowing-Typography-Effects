@@ -1,0 +1,55 @@
+@forward "./reset";
+
+body {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: Verdana, Geneva, sans-serif;
+
+	background-color: #07252d;
+}
+
+.heading__primary {
+	position: relative;
+
+	color: transparent;
+
+	font-size: clamp(3rem, 6vw, 10rem);
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+
+	&-span {
+		animation: animateText 5s linear infinite;
+	}
+
+	&-span-2 {
+		animation-delay: 0.4s;
+	}
+}
+
+@keyframes animateText {
+	0%,
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		color: #0e3742;
+		text-shadow: none;
+	}
+	0%,
+	15%,
+	40%,
+	60%,
+	80%,
+	92%,
+	100% {
+		color: #fff;
+		text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+			0 0 80px #03bcf4, 0 0 160px #03bcf4, 0 0 400px #03bcf4;
+	}
+}
